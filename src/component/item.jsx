@@ -21,7 +21,7 @@ function Item (props){
     })
 
     const choseRadio =(e)=>{
-        console.log(e.target.value)
+        // console.log(e.target.value)
         setRadio(e.target.value)
     }
     const addmedia=(e)=>{
@@ -43,7 +43,7 @@ function Item (props){
     }
     useEffect(()=>{
         setMyData(data)
-        console.log(data)
+        // console.log(data)
     },[data])
     const onEdit =(e)=>{
         let value=e.edit

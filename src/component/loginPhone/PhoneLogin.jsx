@@ -12,11 +12,11 @@ function PhoneLogin (){
     const naveget=useNavigate()
     const onchangePhone =(e)=>{
         setPhone(e.target.value)
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     const onchangeCode =(e)=>{
         setCode(e.target.value)
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
 
     const setUpRecaptcha=()=>{
@@ -37,23 +37,22 @@ function PhoneLogin (){
     const onSignInSubmit = (e) => {
         e.preventDefault();
         setUpRecaptcha();
-        let phoneNumber =  "+58 0115876534";
-        console.log(phoneNumber);
+        let phoneNumber =  "+58 "+phone;
+        // console.log(phoneNumber);
         let appVerifier = window.recaptchaVerifier;
-        console.log("a")
+        // console.log("a")
 
         signInWithPhoneNumber(auth,phoneNumber, appVerifier)
         .then(function (confirmationResult) {
             // SMS sent. Prompt user to type the code from the message, then sign the
             // user in with confirmationResult.confirm(code).
-            console.log("a")
             window.confirmationResult = confirmationResult;
             // console.log(confirmationResult);
             console.log("OTP is sent");
             setPhonex(false)
         })
         .catch(function (error) {
-            console.log(error);
+            // console.log(error);
         });
     };
     const ocCode=(e)=>{
@@ -71,7 +70,7 @@ function PhoneLogin (){
             naveget("/")
         })
         .catch(function (error) {
-            console.log(error);
+            // console.log(error);
             alert("Incorrect OTP");
         });
     }
