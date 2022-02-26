@@ -1,0 +1,35 @@
+.media {
+    width:50% ;
+    height: 300px;
+}
+.allitem {
+    display: flex;
+}
+.btn{
+    width: 70px;
+}
+.bodyItem{
+    padding: 100px;
+    border: 3px solid rgb(212, 212, 212);
+}
+.PhoneLogin{
+    margin: 200px;
+    background-color: rgb(162, 192, 170);
+    height: 500px;
+}
+.btnLogin{
+    width: 100%;
+    background-color: rgba(49, 132, 165, 0);
+    
+}
+.btnLogin:hover{
+    width: 100%;
+    background-color: rgb(192, 183, 183);
+    
+}
+.del{
+    background-color: rgb(175, 60, 60) !important;
+}
+.idet{
+    background-color: rgb(37, 79, 133) !important;
+}
