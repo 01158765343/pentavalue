@@ -5,15 +5,19 @@ import App from './App';
 import thunk from 'redux-thunk'
 // import App from './components/App';
 import { createStore } from 'redux'
-import { applyMiddleware } from 'redux'
+import { applyMiddleware ,combineReducers} from 'redux'
 import { counterReducer } from "./redux/reducer"
+import { auth } from "./redux/auth"
 
 import { Provider } from 'react-redux'
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 // import { AuthProvider } from './context/auth';
-import "bootstrap/dist/css/bootstrap.min.css"
-let store = createStore(counterReducer,applyMiddleware(thunk))
+let rootReducer=combineReducers({
+  counterReducer,
+  auth
+})
+let store = createStore(rootReducer,applyMiddleware(thunk))
 
 ReactDOM.render(
   <React.StrictMode>

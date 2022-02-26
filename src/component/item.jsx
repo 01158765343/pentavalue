@@ -9,7 +9,7 @@ import { Col, Image, Row ,DatePicker,Input} from 'antd';
 
 function Item (props){
     const dispatch=useDispatch()
-    const data=useSelector((state)=> state)
+    const data=useSelector((state)=> state.counterReducer)
     const [myData ,setMyData]=useState()
     const [radio,setRadio]=useState("image")
     const [AddItem ,setAddItem ]=useState({
@@ -43,6 +43,7 @@ function Item (props){
     }
     useEffect(()=>{
         setMyData(data)
+        console.log(data)
     },[data])
     const onEdit =(e)=>{
         let value=e.edit
